@@ -15,10 +15,12 @@ import com.example.traqueur1.ui.ListAdapter;
 
 public class ListAppareilFragment extends Fragment {
 
+    private Object ListAdapter;
+
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_list_appareil, container, false);
 
-        RecyclerView recyclerView = view.findViewById(R.id.listRecyclerView);
+        final RecyclerView recyclerView = view.findViewById(R.id.listRecyclerView);
 
         ListAdapter listAdapter = new ListAdapter();
         recyclerView.setAdapter(listAdapter);
@@ -26,5 +28,4 @@ public class ListAppareilFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         return view;
     }
-
 }

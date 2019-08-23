@@ -30,6 +30,8 @@ public class GestionDeFlotte extends AppCompatActivity {
         });
 
         Button SuppModiBtn = findViewById(R.id.idmodsup);
+        Button AddDispositif = findViewById(R.id.idajout);
+        Button Aide = findViewById(R.id.idsauve);
 
         SuppModiBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,5 +42,27 @@ public class GestionDeFlotte extends AppCompatActivity {
 
             }
         });
+
+        AddDispositif.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(GestionDeFlotte.this, HostActivity.class);
+                startActivity(i);
+                finish();
+
+            }
+        });
+
+
+        /*Aide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(GestionDeFlotte.this, AideActivity.class);
+                startActivity(i);
+                finish();
+
+            }
+        });*/
+
     }
 }

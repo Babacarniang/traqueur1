@@ -16,9 +16,7 @@ public class AppareilResponse {
         return appareils;
     }
 
-    public void setAppareils(List<Appareil> positions) {
-        this.appareils = appareils;
-    }
+    private String message;
 
     public int getSuccess() {
         return success;
@@ -27,6 +25,33 @@ public class AppareilResponse {
     public void setSuccess(int success) {
         this.success = success;
     }
+
+    private int status;
+
+    public void setAppareil(List<Appareil> appareils) {
+        this.appareils = appareils;
+    }
+
+    public List<Appareil> sendAppareil() {
+        return appareils;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
 }
+
 
 

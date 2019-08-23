@@ -45,7 +45,7 @@ public class RegisterActivity extends AppCompatActivity {
     private String confirmPassword;
     private String fullName;
     private ProgressDialog pDialog;
-    private String register_url = "http://192.168.1.16/traqueur-api/register.php";
+    private String register_url = "http://192.168.1.20/traqueur-api/register.php";
     private SessionHandler session;
 
     @Override
@@ -84,12 +84,9 @@ public class RegisterActivity extends AppCompatActivity {
                     //registerUser();
                     registerWithRetrofit(username, password, fullName);
                 }
-
             }
         });
-
     }
-
     private void registerWithRetrofit(final String username, String password, final String fullName) {
         displayLoader();
         Retrofit retrofitClient = RetrofitClient.getRetrofitClient();
@@ -115,9 +112,7 @@ public class RegisterActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(getApplicationContext(),
                             serverResponse.getMessage(), Toast.LENGTH_SHORT).show();
-
                 }
-
             }
 
             @Override
@@ -128,7 +123,6 @@ public class RegisterActivity extends AppCompatActivity {
                 Log.d(TAG, "onFailure: " + t.toString());
             }
         });
-
 
     }
 

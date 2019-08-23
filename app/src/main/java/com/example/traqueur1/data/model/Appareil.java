@@ -3,22 +3,22 @@ package com.example.traqueur1.data.model;
 public class Appareil {
 
     private String id;
-    private double proprietaire;
+    private String proprietaire;
     private double code;
 
 
-    public Appareil(double proprietaire, double code) {
+    public Appareil(String proprietaire, double code) {
         this.proprietaire = proprietaire;
         this.code = code;
 
     }
 
-    public double getProprietaire() {
+    public String getProprietaire() {
         return proprietaire;
     }
 
-    public void setProprietaire(double proprietaire) {
-        this.proprietaire = proprietaire;
+    public void setProprietaire(String proprietaire) {
+        return;
     }
 
     public double getCode() {
@@ -26,7 +26,7 @@ public class Appareil {
     }
 
     public void setCode(double code) {
-        this.code = code;
+        return;
     }
 
     public String getId() {

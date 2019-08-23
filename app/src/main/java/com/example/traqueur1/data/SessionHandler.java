@@ -94,4 +94,6 @@ public class SessionHandler {
         mEditor.commit();
     }
 
+    public void valider(String proprietaire, String code) {
+    }
 }

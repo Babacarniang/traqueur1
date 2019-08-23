@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     private String username;
     private String password;
     private ProgressDialog pDialog;
-    private String login_url = "http://192.168.1.16/traqueur-api/login.php";
+    private String login_url = "http://192.168.1.20/traqueur-api/login.php";
     private SessionHandler session;
 
     @Override

@@ -10,7 +10,7 @@ public class RetrofitClient {
     public static Retrofit getRetrofitClient() {
         if (retrofit == null)
             retrofit = new Retrofit.Builder()
-                    .baseUrl("http://192.168.1.16/traqueur-api/")
+                    .baseUrl("http://192.168.1.20/traqueur-api/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
 

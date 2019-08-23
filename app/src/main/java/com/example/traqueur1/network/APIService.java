@@ -38,14 +38,12 @@ public interface APIService {
     @GET("getPositions.php")
     Call<PositionResponse> getPosition();
 
-
     @POST("appareil.php")
-    Call<ServerResponse> sendAppareil(@Body Appareil appareil);
+    Call<AppareilResponse> sendAppareil(@Body Appareil appareil);
+
 
     @GET("getAppareils.php")
     Call<AppareilResponse> getAppareil();
-
-    Call<ServerResponse> valider(String proprietaire, String code);
 
 
     /**

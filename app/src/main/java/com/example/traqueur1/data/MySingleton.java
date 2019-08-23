@@ -5,7 +5,6 @@ import android.content.Context;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
-import com.example.traqueur1.ui.appareil.AjoutAppareilFragment;
 
 /**
  * Created by Abhi on 20 Jan 2018 020.
@@ -15,6 +14,7 @@ public class MySingleton {
     private static MySingleton mInstance;
     private static Context mCtx;
     private RequestQueue mRequestQueue;
+
 
 
     private MySingleton(Context context) {
@@ -27,6 +27,27 @@ public class MySingleton {
             mInstance = new MySingleton(context);
         }
         return mInstance;
+    }
+
+    public static class appareil {
+        private String id;
+        private double proprietaire;
+        private double code;
+
+        private appareil(Context context) {
+            String id;
+            double proprietaire;
+            double code;
+        }
+
+        public static synchronized MySingleton getInstance(Context context) {
+            if (mInstance == null) {
+                mInstance = new MySingleton(context);
+            }
+            return mInstance;
+        }
+
+
     }
 
     private RequestQueue getRequestQueue() {
@@ -42,7 +63,4 @@ public class MySingleton {
         getRequestQueue().add(req);
     }
 
-    public AjoutAppareilFragment AjoutAppareilFragment() {
-        return AjoutAppareilFragment();
-    }
 }
